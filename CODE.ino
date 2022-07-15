@@ -1,4 +1,4 @@
-create database Bank;
+--create database Bank; before typing the rest of code
 USE Bank;
 CREATE TABLE Branch (
 id INT,
@@ -15,15 +15,6 @@ expiration_date DATE,
 PRIMARY KEY (id)
 );
 
-USE Bank;
-CREATE TABLE Loan_type (
-id INT,
-type CHAR(10) UNIQUE,
-description CHAR(100),
-base_amount DECIMAL,
-base_interest_rate DECIMAL,
-PRIMARY KEY (id)
-);
 
 USE Bank;
 CREATE TABLE Loan_type (
@@ -68,7 +59,7 @@ ON DELETE SET NULL
 
 
 USE Bank;
-CREATE TABLE Transaction(
+CREATE TABLE Transactions(
 id INT,
 account_id INT,
 description CHAR(100),
